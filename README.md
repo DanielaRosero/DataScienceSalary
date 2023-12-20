@@ -1,7 +1,8 @@
 # DataScienceSalary
  ## Análisis de Salarios en Ciencia de Datos
 
-Este repositorio contiene un análisis detallado de salarios en el campo de la ciencia de datos, explorando variaciones según ubicación, nivel de experiencia y modalidad de empleo. Se utiliza un conjunto de datos transformado en un DataFrame con pandas en Python.
+Este repositorio contiene un análisis detallado de salarios en el campo de la ciencia de datos, explorando variaciones según ubicación, nivel de experiencia y modalidad de empleo. Empleando Pandas en Python para transformar el conjunto de datos en un DataFrame y las librerías matplotlib.pyplot, seaborn y plotly para la visualización.
+
 
 ### Variables Destacadas
 
