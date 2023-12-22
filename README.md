@@ -18,6 +18,7 @@ Este repositorio contiene un análisis detallado de salarios en el campo de la c
 2. **Visualización y Análisis:**
    - Salario promedio por experiencia.
    - Rankings de trabajos demandados, mejor remunerados y posibilidad de trabajo remoto.
+3. **Obtención de conclusiones:** a partir del análisis realizado.
   
 Explora este repositorio para obtener insights sobre la distribución salarial en ciencia de datos y su relación con diversos factores. 
 ¡Descubre patrones y conclusiones valiosas!
