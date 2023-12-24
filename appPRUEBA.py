@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Cargar datos
-df = pd.read_csv(r'C:\Users\danyr\Documents\GitHub\DataScienceSalary\dataset\ds_salaries.csv')
+df = pd.read_csv('dataset\ds_salaries.csv')
 
 # Configuración de la página
 st.set_page_config(page_title="Dashboard de Salarios en Ciencia de Datos", page_icon=":bar_chart:", layout="wide")
@@ -42,8 +42,9 @@ with tab1:
 
     with col3:
         st.header('Proporción por Tipo de Empleo')
-        employment_type_counts = filtered_data['employment_type'].value_counts()
-        fig3 = px.pie(employment_type_counts, names=employment_type_counts.index, values='employment_type', title='Tipos de Empleo')
+        employment_type_counts = filtered_data['employment_type'].value_counts().reset_index()
+        employment_type_counts.columns = ['employment_type', 'count']
+        fig3 = px.pie(employment_type_counts, names='employment_type', values='count', title='Tipos de Empleo')
         st.plotly_chart(fig3, use_container_width=True)
 
     # Segunda fila de gráficos (2 columnas)
@@ -66,14 +67,16 @@ with tab1:
 
     with col6:
         st.header('Nivel de Experiencia')
-        exp_level_counts = filtered_data['experience_level'].value_counts()
-        fig6 = px.pie(exp_level_counts, names=exp_level_counts.index, values='experience_level', title='Nivel de Experiencia')
+        exp_level_counts = filtered_data['experience_level'].value_counts().reset_index()
+        exp_level_counts.columns = ['experience_level', 'count']
+        fig6 = px.pie(exp_level_counts, names='experience_level', values='count', title='Nivel de Experiencia')
         st.plotly_chart(fig6, use_container_width=True)
 
     with col7:
         st.header('Relación de Trabajo Remoto')
-        remote_ratio_counts = filtered_data['remote_ratio'].value_counts()
-        fig7 = px.pie(remote_ratio_counts, names=remote_ratio_counts.index, values='remote_ratio', title='Trabajo Remoto')
+        remote_ratio_counts = filtered_data['remote_ratio'].value_counts().reset_index()
+        remote_ratio_counts.columns = ['remote_ratio', 'count']
+        fig7 = px.pie(remote_ratio_counts, names='remote_ratio', values='count', title='Trabajo Remoto')
         st.plotly_chart(fig7, use_container_width=True)
 
     with col8:
